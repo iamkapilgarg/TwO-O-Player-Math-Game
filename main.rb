@@ -22,11 +22,7 @@ class Main
     end
     puts "#{player1.name}: #{player1.life}/3 vs #{player2.name}: #{player2.life}/3"
     puts "------- NEW TURN ---------"
-    if turn.player == player1
-      turn = Turn.new(player2)
-    else
-      turn = Turn.new(player1)
-    end
+    turn.player == player1 ? turn = Turn.new(player2) : turn = Turn.new(player1)
   end
   if(player1.life == 0)
     puts "#{player2.name} wins the game"
